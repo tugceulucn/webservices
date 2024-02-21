@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Sayfa taşmalarını önlemek için ekledik */
+}
+
+/* Hareketli arkaplan animasyonu tanımı */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%; /* Başlangıç pozisyonu */
+    }
+    50% {
+        background-position: 100% 50%; /* Yarı noktada pozisyon değişikliği */
+    }
+    100% {
+        background-position: 0% 50%; /* Son pozisyon */
+    }
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    padding: 20px;
+    height: 100vh; /* Ekran yüksekliği kadar alan kaplamak için */
+    background: linear-gradient(to right, #fe4fe7 0%, #00f2fe 100%); /* Başlangıç renkleri */
+    background-size: 200% 100%; /* Arkaplanın genişlemesini sağlamak için */
+    animation: moveBackground 5s linear infinite; /* Animasyon süresi ve tekrar sayısı */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}

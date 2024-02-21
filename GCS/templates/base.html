@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Homepage/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'Homepage/css/bootstrap.min.css'%}">
+    {% block cs_files %}{% endblock%}
+    <title>
+        {%block title%} {% endblock%}
+        </title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            display: none; /* Hoş Geldiniz başlığını kaldırmak için display: none; ekledik */
+        }
+
+        nav {
+            background-color: #2196F3; /* Mavi renk ekledik */
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            position: relative;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        iframe {
+            width: 50%; /* İframe'in genişliğini ayarladık */
+            height: 500px; /* İframe'in yüksekliğini ayarladık */
+        }
+    </style>
+    
+</head>
+
+<nav class="navbar navbar-dark bg-primary navbar-expand-lg" >
+    <div class = "container"> 
+        <a class="navbar-brand" href="">GCS</a>
+        <ul class="navbar-nav me-auto">
+
+            <li class = "nav-item">
+                <a class="navbar-brand" href="">Quanta Team</a> <!-- Quanta Team bağlantısını ekledik -->
+            </li>
+            <li class = "nav-item">
+                <a class="navbar-brand"href="">Info Page</a>
+            </li>
+            <li class = "nav-item"></li>
+                <a class="navbar-brand"href="">Sensor Page</a>
+            </li>
+            <li class = "nav-item">
+                <a class="navbar-brand"href="">Cam Page</a>
+            </li>
+        
+        </ul>
+    </div>
+       
+    </nav>
+
+    
+<body>
+    {% block content%}
+
+
+    {% endblock%}
+    <script> src="static 'homepage/bootstrap.min.js'"</script>
+</body>
+</html>
